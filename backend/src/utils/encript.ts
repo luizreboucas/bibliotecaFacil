@@ -10,7 +10,7 @@ export const crypt = async(plainTextPassword: string) => {
     }
 }
 
-export const isCorrect =  async(plainTextPassword: string, dbHashedPass: string) => {
+export const isCorrect =  async(plainTextPassword: string, dbHashedPass: string): Promise<boolean> =>  {
     try {
         return await bcrypt.compare(plainTextPassword, dbHashedPass)
     } catch (error) {

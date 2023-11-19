@@ -71,6 +71,36 @@ class UsersController{
         }
     }
 
+    static login = async(req: Request, res: Response) => {
+        try {
+            const { email, password } = req.body;
+            if ( !email || !password){
+                throw ("falta email ou senha")
+            }
+            const dbUser = await Users.findOne({email}).exec();
+            console.log(dbUser)
+            if(dbUser){
+                const passwordIsCorrect = await isCorrect(password, dbUser.password);
+                passwordIsCorrect 
+                ? res.status(200).json({
+                    login: true
+                })
+                : res.status(401).json({
+                    login: false
+                })
+                
+            }else{
+                res.status(401).json({
+                    login: false
+                })
+            }
+        } catch (error) {
+            res.status(401).json({
+                login: false
+            })
+        }
+    }
+
     
 }
 

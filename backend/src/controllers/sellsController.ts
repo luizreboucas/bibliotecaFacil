@@ -8,6 +8,7 @@ class SellsController{
             const sells = await Sells.find()
             .populate('seller')
             .populate('buyer')
+            .populate('book')
             
             res.status(200).json(sells)
         } catch (error) {
