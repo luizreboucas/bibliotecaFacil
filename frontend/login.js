@@ -1,12 +1,16 @@
-function togglePassword() {
-    const passwordInput = document.getElementById('inputSenha');
-    const passwordToggle = document.querySelector('.toggle-password svg');
+async function handleLogin() {
+  const email = document.getElementById('inputEmail').value;
+  const password = document.getElementById('inputSenha').value;
 
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        passwordToggle.style.color = 'green'; //visivel
-    } else {
-        passwordInput.type = 'password';
-        passwordToggle.style.color = '#991818'; //oculto
-    }
+  try {
+    const response = await axios.post('http://localhost:3500/users/login', {
+      email: email,
+      password: password,
+    });
+
+    console.log('Login bem-sucedido:', response.data);
+
+  } catch (error) {
+    console.error('Erro no login:', error.message);
+  }
 }

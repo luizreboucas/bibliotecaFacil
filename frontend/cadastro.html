@@ -48,21 +48,21 @@
               <div class="mb-3 text-center">
                 <div class="row">
                   <div class="col">
-                    <label for="inputUsuario" class="form-label">Usuário</label>
+                    <label for="inputUsuarioCadastro" class="form-label">Usuário</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="inputUsuario"
+                      id="inputUsuarioCadastro"
                       placeholder="Crie seu usuário"
                     />
                   </div>
                   <div class="col">
-                    <label for="inputSenha" class="form-label">Senha</label>
+                    <label for="inputSenhaCadastro" class="form-label">Senha</label>
                     <div class="input-group">
                       <input
                         type="password"
                         class="form-control"
-                        id="inputSenha"
+                        id="inputSenhaCadastro"
                         placeholder="Crie sua senha"
                       />
                       <span class="input-group-text toggle-password">
@@ -92,11 +92,11 @@
               </div>
 
             <div class="mb-3 text-center">
-              <label for="inputEmail" class="form-label">Email</label>
+              <label for="inputEmailCadastro" class="form-label">Email</label>
               <input
                 type="email"
                 class="form-control"
-                id="inputEmail"
+                id="inputEmailCadastro"
                 placeholder="Digite seu email"
               />
             </div>
@@ -109,7 +109,7 @@
             </div>
 
             <div class="button-send text-center">
-              <button type="submit" class="btn btn-primary">Criar conta</button>
+              <button type="submit" class="btn btn-primary" onclick="handleCadastro()">Criar conta</button>
             </div>
           </form>
         </div>
@@ -126,7 +126,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
-    <script src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="cadastro.js"></script>
+    <script src="togglePassword.js"></script>
   </body>
 </html>

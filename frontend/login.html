@@ -19,9 +19,6 @@
       <div class="left-side">
         <div class="welcome">
           <h1 class="welcome-text">Seja bem vindo à sua biblioteca!</h1>
-          <!-- <div class="book-img">
-            <img src="./assets/img/books.png" alt="Book images" />
-          </div> -->
         </div>
       </div>
 
@@ -36,12 +33,12 @@
           <form class="p-3">
             <div class="mb-3 text-center">
               <span
-                ><label for="inputUsuario" class="form-label">Usuário</label>
+                ><label for="inputEmail" class="form-label">Usuário</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="inputUsuario"
-                  placeholder="Digite seu usuário"
+                  id="inputEmail"
+                  placeholder="Digite seu email"
               /></span>
             </div>
             <div class="mb-3 text-center">
@@ -63,7 +60,7 @@
                 </div>
             </div>
             <div class="button-send text-center">
-              <button type="submit" class="btn btn-primary">Entrar</button>
+              <button type="submit" class="btn btn-primary" onclick="handleLogin()">Entrar</button>
             </div>
           </form>
           <div class="cadastro">
@@ -82,5 +79,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="login.js"></script>
+    <script src="togglePassword.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>
