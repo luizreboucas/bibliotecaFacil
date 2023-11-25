@@ -9,6 +9,12 @@ async function handleLogin() {
     });
 
     console.log('Login bem-sucedido:', response.data);
+    
+    if(isAdmin){
+      window.location.href = window.location.origin+'/frontend/home.html'
+    } else{
+      window.location.href = window.location.origin+'/frontend/home.html'
+    }
 
   } catch (error) {
     console.error('Erro no login:', error.message);
